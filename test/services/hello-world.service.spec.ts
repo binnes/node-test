@@ -21,14 +21,14 @@ describe('Hello World service', () =>{
   describe('Given greeting()', () => {
     context('when "Juan" provided', () => {
       const name = 'Juan';
-      test('then return "Hello, Juan!"', async () => {
-        expect(await service.greeting(name)).toEqual(`Hello, ${name}!`);
+      test('then return "***Hello, Juan! ***"', async () => {
+        expect(await service.greeting(name)).toEqual(`Hello, ${name}! ***`);
       });
     });
 
     context('when no name provided', () => {
-      test('then return "Hello, World!"', async () => {
-        expect(await service.greeting()).toEqual('Hello, World!');
+      test('then return "***Hello, World! ***"', async () => {
+        expect(await service.greeting()).toEqual('***Hello, World! ***');
       });
     })
   });
